@@ -4,9 +4,14 @@
   font-family: cursive;
   box-sizing: border-box;
 }
+/*This will change the styel in the body
+Mostly all contents should be in the body*/
 body {
   background: #a59999;
   color: #39396d;
+  font-weight: bold;
+  font-family: Arial;
+  text-align: center;
 }
 /* Add a black background color to the top navigation */
 .topnav {
