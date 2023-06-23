@@ -9,10 +9,10 @@ Mostly all contents should be in the body*/
 body {
   background: #a59999;
   color: #393970;
+  background-image: url("http://3.bp.blogspot.com/-fY4IvXRmXrk/UtA_4l0G0nI/AAAAAAAAAPI/DLiol-ZgDAo/s1600/space-rthwj,hgjkasf.gif");
   font-weight: bold;
   font-family: Arial;
   text-align: center;
-  background-image: url("http://3.bp.blogspot.com/-fY4IvXRmXrk/UtA_4l0G0nI/AAAAAAAAAPI/DLiol-ZgDAo/s1600/space-rthwj,hgjkasf.gif");
   background-repeat: no-repeat;
   background-size: cover;
 }
