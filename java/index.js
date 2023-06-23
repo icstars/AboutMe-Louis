@@ -164,31 +164,116 @@
 //   alert("No account found!");
 // }
 
-let randomNumber = Math.floor(Math.random() * 4);
-console.log(randomNumber);
-let arr = ["liv", "kamar", "derrick", "jimmy"];
-console.log(arr[randomNumber]);
-if (arr[randomNumber] === arr[0]) {
-  console.log("Hello world!");
-} else if (arr[randomNumber] === arr[1]) {
-  console.log("Goodbye world!");
-} else if (arr[randomNumber] === arr[2]) {
-  console.log("Something");
-} else if (arr[randomNumber] === arr[3]) {
-  console.log("Anyone");
-}
+// let randomNumber = Math.floor(Math.random() * 4);
+// console.log(randomNumber);
+// let arr = ["liv", "kamar", "derrick", "jimmy"];
+// console.log(arr[randomNumber]);
+// if (arr[randomNumber] === arr[0]) {
+//   console.log("Hello world!");
+// } else if (arr[randomNumber] === arr[1]) {
+//   console.log("Goodbye world!");
+// } else if (arr[randomNumber] === arr[2]) {
+//   console.log("Something");
+// } else if (arr[randomNumber] === arr[3]) {
+//   console.log("Anyone");
+// }
 
-// Challenge: Guess the Number
-// The program generates a random number between 1 and 10.
-// The user is prompted to guess the number.
-// If the user's guess matches the generated number, an alert is shown with a success message.
-// If the user's guess is incorrect, an alert is shown with a failure message.
+// // Challenge: Guess the Number
+// // The program generates a random number between 1 and 10.
+// // The user is prompted to guess the number.
+// // If the user's guess matches the generated number, an alert is shown with a success message.
+// // If the user's guess is incorrect, an alert is shown with a failure message.
 
-let randomNumber1 = Math.ceil(Math.random() * 10);
-console.log(randomNumber1);
-let prompt1 = prompt("Guess the number");
-if (prompt1 == randomNumber1) {
-  alert("You are correct!");
-} else {
-  alert("You are incorrect!");
+// let randomNumber1 = Math.ceil(Math.random() * 10);
+// console.log(randomNumber1);
+// let prompt1 = prompt("Guess the number");
+// if (prompt1 == randomNumber1) {
+//   alert("You are correct!");
+// } else {
+//   alert("You are incorrect!");
+// }
+
+// // looping
+// let myName = "Lucycan";
+// console.log(myName);
+// console.log(typeof myName);
+// // if (myName === "Lucycan") {
+// //   console.log(`Hello ${myName}`); // will produce Hello Lucycan
+// // } else {
+// //   console.log(false);
+// // }
+
+// // // for loop**********************************************************************************
+// // for (let i = 0; i < 10; i++) {
+// //   // if you write a for loop wrong, it'll go into an infinite loop; will keep looping
+// //   console.log(i); // it will produce 0-9 because once i becomes 10, it'll go out the loop
+// // }
+
+// // arrays and methods***********************
+// let team = ["Lucycan", "Collin", "Mark", "Cortez"];
+// console.log(team);
+// console.log(team.length); //shows how long is the array, which is 4
+// // push ************************************
+// console.log(team.push("Derrick", "John")); // push this name to this array
+// console.log(team);
+// // pop ************************************
+// console.log(team.pop()); // take out the last item in the array
+// console.log(team);
+// // join ************************************
+// console.log(team.join()); //grabs every item in your array and make it a string; seperate it with a comma ','
+// console.log(team.join(" I ")); //grabs every item in your array and make it a string; seperate it with a ' I '; you can put spaces in there
+// // slice returns a new array
+// console.log(team);
+// console.log(team.slice(1, 3)); // get rid of everything before index 1 and everything at index 3 and after
+// // split************************************
+// let team1 = "john,mike,keirstin,lucy";
+// console.log(team1);
+// let team1Split = team1.split();
+// console.log(team1Split);
+// // looping thru an array*********************
+// console.log(team);
+// for (let i = 0; i < team.length; i++) {
+//   console.log(i); // produce 0-4
+// }
+// for (let i = 0; i < team.length; i++) {
+//   console.log(team[i]); // produce all the items in the list in console line
+// }
+// for (let i = 0; i < team.length; i++) {
+//   console.log(`Hello ${team[i]}`); // Will do Hello "Name" for all names in the array
+// }
+
+// let roles = [
+//   "Tech Manager",
+//   "TechFello",
+//   "Placement Manager",
+//   "Program Manager",
+//   "Intern",
+// ];
+
+// // Hi my name is Lucycan and I am the Tech Manager
+// for (let i = 0; i < team.length; i++) {
+//   console.log(`Hi my name is ${team[i]} and I am the ${roles[i]}`);
+// }
+// Assignment**********************************
+// let name1 = prompt("What is your name?")
+// let role1 = prompt("What is your role?")
+// let name2 = prompt("What is your name?")
+// let role2 = prompt("What is your role?")
+// let name3 = prompt("What is your name?")
+// let role3 = prompt("What is your role?")
+// let name4 = prompt("What is your name?")
+// let role4 = prompt("What is your role?")
+// let arrayName = [name1, name2, name3, name4];
+// let arrayRoles = [role1, role2, role3, role4];
+let rfpTeam = prompt("Enter your team's names:"); // louis,shadi,leyanna,kemar
+let rfpRoles = prompt("Enter your team roles"); // Technical Analyst,Business Analyst,Quality Analyst,Program Manager
+console.log(rfpTeam);
+let rfpTeamSplit = rfpTeam.split(",");
+let rfpRolesSplit = rfpRoles.split(",");
+console.log(rfpTeamSplit);
+console.log(rfpRolesSplit);
+for (i = 0; i < rfpTeamSplit.length; i++) {
+  console.log(
+    `Hello my name is ${rfpTeamSplit[i]} and I am the ${rfpRolesSplit[i]}`
+  );
 }
