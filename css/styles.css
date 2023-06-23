@@ -4,23 +4,24 @@
   font-family: cursive;
   box-sizing: border-box;
 }
-
+/*This will change the styel in the body
+Mostly all contents should be in the body*/
 body {
   background: #a59999;
   color: #393970;
   font-weight: bold;
   font-family: Arial;
   text-align: center;
-  background-image: url("/assets/space.gif");
+  background-image: url("http://3.bp.blogspot.com/-fY4IvXRmXrk/UtA_4l0G0nI/AAAAAAAAAPI/DLiol-ZgDAo/s1600/space-rthwj,hgjkasf.gif");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+/* Add a black background color to the top navigation */
 .topnav {
   background-color: #c47171;
   overflow: hidden;
 }
-
+/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   color: #292424;
@@ -29,12 +30,12 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
+/* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-
+/* Add a color to the active/current link */
 .topnav a.active {
   background-color: #04aa6d;
   color: white;
