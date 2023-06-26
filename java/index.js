@@ -214,21 +214,22 @@
 // console.log(team);
 // console.log(team.length); //shows how long is the array, which is 4
 // // push ************************************
-// console.log(team.push("Derrick", "John")); // push this name to this array
+// console.log(team.push("Derrick", "John")); // push these name to this array
 // console.log(team);
 // // pop ************************************
 // console.log(team.pop()); // take out the last item in the array
 // console.log(team);
 // // join ************************************
-// console.log(team.join()); //grabs every item in your array and make it a string; seperate it with a comma ','
+// console.log(team.join()); // grabs every item in your array and make it a string; seperate it with a comma ','
 // console.log(team.join(" I ")); //grabs every item in your array and make it a string; seperate it with a ' I '; you can put spaces in there
 // // slice returns a new array
 // console.log(team);
 // console.log(team.slice(1, 3)); // get rid of everything before index 1 and everything at index 3 and after
+// console.log(team);
 // // split************************************
 // let team1 = "john,mike,keirstin,lucy";
 // console.log(team1);
-// let team1Split = team1.split();
+// let team1Split = team1.split(",");
 // console.log(team1Split);
 // // looping thru an array*********************
 // console.log(team);
@@ -265,15 +266,113 @@
 // let role4 = prompt("What is your role?")
 // let arrayName = [name1, name2, name3, name4];
 // let arrayRoles = [role1, role2, role3, role4];
-let rfpTeam = prompt("Enter your team's names:"); // louis,shadi,leyanna,kemar
-let rfpRoles = prompt("Enter your team roles"); // Technical Analyst,Business Analyst,Quality Analyst,Program Manager
-console.log(rfpTeam);
-let rfpTeamSplit = rfpTeam.split(",");
-let rfpRolesSplit = rfpRoles.split(",");
-console.log(rfpTeamSplit);
-console.log(rfpRolesSplit);
-for (i = 0; i < rfpTeamSplit.length; i++) {
-  console.log(
-    `Hello my name is ${rfpTeamSplit[i]} and I am the ${rfpRolesSplit[i]}`
-  );
+// let rfpTeam = prompt("Enter your team's names:"); // louis,shadi,leyanna,kemar
+// let rfpRoles = prompt("Enter your team roles"); // Technical Analyst,Business Analyst,Quality Analyst,Program Manager
+// // console.log(rfpTeam);
+// let rfpTeamSplit = rfpTeam.split(",");
+// let rfpRolesSplit = rfpRoles.split(",");
+// // console.log(rfpTeamSplit);
+// // console.log(rfpRolesSplit);
+// for (i = 0; i < rfpTeamSplit.length; i++) {
+//   console.log(
+//     `Hello my name is ${rfpTeamSplit[i]} and I am the ${rfpRolesSplit[i]}`  //template literal
+//   );
+// }
+
+// for loop review******************************
+// for (//initializer; condition; // iterator){
+// output
+// // }
+// for (let initializer = 0; initializer < 5; initializer++) {
+//   console.log("Hello world!"); // this will do it 5 times
+// }
+// // You will always use a for loop with an array
+
+// FUNCTIONS**************************************
+// //ANCHOR - FUNCTIONS
+// // function is an action and reusalbe and call anywhere
+// // pass an array through a function
+// function thisIsTheFunctionName(name) {
+//   console.log(name);
+// }
+// const name = thisIsTheFunctionName("vince");
+// // Type the function name followed by parenthesis
+// // thisIsTheFunctionName("collin"); // in the parenthesis is the arguement; name will be 'collin'
+// // RETURN STATEMENT
+function thisIsTheFunctionName1(name) {
+  // name + "Thao";  // below is why "collin" does not combine with " Thao"
+  // let x = "collin";
+  // "collin" + 5;
+  // x = "Collin" //still
+  name += " Thao";
+  // Correct way of adding "collin" to " Thao"
+  return name;
 }
+let name2 = thisIsTheFunctionName1("collin");
+console.log(name2);
+
+// // Using arrays in functions*****************
+// let array2 = [1, 2, 3, 4, 5, 7];
+// let array3 = [1, 2, 3, 4, 5, 6];
+// let array4 = [1, 2, 3, 4, 5, 6];
+// let array5 = [1, 2, 3, 4, 5, 6];
+// let array6 = [1, 2, 3, 4, 5, 6];
+// function iterateThroughArray(arr) {
+//   for (let initializer = 0; initializer < array2.length; initializer++) {
+//     console.log(array2[initializer]);
+//   }
+// }
+// iterateThroughArray(array2); // will iterate through array2
+// //******************************************* */
+
+// function sum(num1, num2) {
+//   // variables we declared inside the parenthesis; it has no value yet
+//   console.log(num1 + num2);
+// }
+// helloWorld();
+// sum(1, 3);
+// function helloWorld() {
+//   console.log("Hello world");
+// }
+// helloWorld();
+
+// function pho(ingredient1, ingredient2) {
+//   console.log(ingredient1 / ingredient2);
+// }
+
+// pho(9, 3); // will produce 3
+// // ARROW FUNCTION; their scope is different******
+// const function2 = () => {};
+// // **********************************************
+
+// let array10 = [1, 2, 3, 4, 5];
+// let array11 = [1, 2, 3, 4, 7];
+// let array12 = [1, 2, 3, 4, 8];
+// let function21 = function (arr) {
+//   for (let initializer = 0; initializer < arr.length; initializer++) {
+//     console.log(arr[initializer]);
+//   }
+// };
+// function21(array10);
+
+// function blockScope() {
+//   let x = 0; // You can not access in global scope, can only access it here inside the function
+// }
+// console.log(x); // will not produce anything in console
+
+///CHALLENGE*************************************
+//let team = ["Lucycan", "Collin", "Mark", "Cortez"]; ///this array needs to be in block scope not global scope
+///create a function that passes another name as an argument to the function parameter
+/// the function adds the name that you passed to the array
+/// return the array
+/// expected output: ["Lucycan", "Collin", "Mark", "Cortez", "Blanca"]
+
+function blockScope(name1) {
+  let team = ["Lucycan", "Collin", "Mark", "Cortez"];
+  team.push(name1);
+  return team; // Returning the new "team" array back to the variable call "newTeam"
+}
+
+let newTeam = blockScope("Blanca");
+console.log(newTeam);
+// **********************************************!SECTION
