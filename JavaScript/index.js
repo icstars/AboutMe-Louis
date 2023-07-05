@@ -299,17 +299,17 @@
 // // Type the function name followed by parenthesis
 // // thisIsTheFunctionName("collin"); // in the parenthesis is the arguement; name will be 'collin'
 // // RETURN STATEMENT
-function thisIsTheFunctionName1(name) {
-  // name + "Thao";  // below is why "collin" does not combine with " Thao"
-  // let x = "collin";
-  // "collin" + 5;
-  // x = "Collin" //still
-  name += " Thao";
-  // Correct way of adding "collin" to " Thao"
-  return name;
-}
-let name2 = thisIsTheFunctionName1("collin");
-console.log(name2);
+// function thisIsTheFunctionName1(name) {
+//   // name + "Thao";  // below is why "collin" does not combine with " Thao"
+//   // let x = "collin";
+//   // "collin" + 5;
+//   // x = "Collin" //still
+//   name += " Thao";
+//   // Correct way of adding "collin" to " Thao"
+//   return name;
+// }
+// let name2 = thisIsTheFunctionName1("collin");
+// console.log(name2);
 
 // // Using arrays in functions*****************
 // let array2 = [1, 2, 3, 4, 5, 7];
@@ -367,12 +367,32 @@ console.log(name2);
 /// return the array
 /// expected output: ["Lucycan", "Collin", "Mark", "Cortez", "Blanca"]
 
-function blockScope(name1) {
-  let team = ["Lucycan", "Collin", "Mark", "Cortez"];
-  team.push(name1);
-  return team; // Returning the new "team" array back to the variable call "newTeam"
-}
+// function blockScope(name1) {
+//   let team = ["Lucycan", "Collin", "Mark", "Cortez"];
+//   team.push(name1);
+//   return team; // Returning the new "team" array back to the variable call "newTeam"
+// }
 
-let newTeam = blockScope("Blanca");
-console.log(newTeam);
+// let newTeam = blockScope("Blanca");
+// console.log(newTeam);
 // **********************************************!SECTION
+
+// DOM STUFF, Manipulate elements in our HTML page********************************************!SECTION
+// Document Object Model, takes html code and perceive it as a data structure
+// DOM Tree; parents, siblings, childrens; family tree
+// DOM Manipulation
+console.log(document); // will console log your enter .html document
+const input = document.getElementById("calendar"); // grabbing ID selector
+console.log(input);
+const submit = document.getElementsByClassName("submit"); // element with a class
+console.log(submit[0]);
+// ID's are used for unique identifier; classes are used for a general list of things, making it an array
+// QUERY SELECTOR
+const h1 = document.querySelector("h1");
+console.log(h1);
+// EVENT LISTENER; something that happens on the web page; click events, resize events, change events, etc.
+submit[0].addEventListener("click", function () {
+  console.log("hello world"); // everytime I click on the button, it'll produce 'hello world' in the console log
+  //   h1.textContent = "goodbye world";  // after clicking the 'Button', it'll produce "goodbye world" in the h1 element
+  h1.textContent = `You have reserved for ${input.value}`; // Template Literal;
+}); // the parenthesis is an arguement;
